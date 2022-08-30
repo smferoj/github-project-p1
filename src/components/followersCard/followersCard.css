@@ -1,0 +1,45 @@
+.followers_container{
+    color: white ;
+    height: 490px;
+    margin-top: 6rem;
+    border: 0.5px solid white;
+    padding: 1rem;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.user_container:hover{
+    background: rgb(89, 80, 80);  
+}
+
+.followers_body{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap:5%;
+    padding-top: 2rem;
+}
+
+.followers_head{
+    display: flex;
+    flex-direction: column;
+}
+.followers_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.followers_img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+}
+
+.followers_head{
+
+    flex: 1;
+    margin-top: 1.5rem;
+}
