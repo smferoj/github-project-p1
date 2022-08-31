@@ -4,17 +4,21 @@ import { HiLocationMarker } from 'react-icons/hi'
 import { FaRegAddressBook } from 'react-icons/fa'
 import { BsLink } from 'react-icons/bs';
 
-const UserCard = ({setUser, user}) => {
+const UserCard = ({setUser, user, username}) => {
     // State lifting to app.js================
+    // const[user, setUser] = useState({}) 
+    // const[username, setUsername] =useState('ahnabshahin')
+    
 
 useEffect(()=>{
     async function handleData(){
-        const result = await fetch("https://api.github.com/users/ahnabshahin")
+        const result = await fetch(`https://api.github.com/users/${username}`)
         const data = await result.json()
         setUser(data)
     }
     handleData()
-},[])
+}, [username])
+
 
     return (
         <div className='user_container'>
